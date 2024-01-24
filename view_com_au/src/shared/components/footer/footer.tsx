@@ -5,6 +5,7 @@ import {
   FOOTER_LINKS_MOBILE_VIEW,
   FOOTER_SM_ICONS,
 } from "./footer.constant";
+import PageContainer from "../page-container/page-container";
 
 const Footer = () => {
   const renderFooterHead = () => (
@@ -71,7 +72,7 @@ const Footer = () => {
             alt="company-logo"
           />
         </span>
-        <p className="text-xs">
+        <p className="text-xs text-center">
           Copyright © 2001-2024 | resi.uatz.view.com.au Ltd
         </p>
       </div>
@@ -92,7 +93,7 @@ const Footer = () => {
     </div>
   );
   return (
-    <>
+    <PageContainer>
       {renderFooterHead()}
       <div className="border-b" />
 
@@ -107,7 +108,7 @@ const Footer = () => {
 
       <div className="border-b" />
       {renderFooterBottom()}
-    </>
+    </PageContainer>
   );
 };
 

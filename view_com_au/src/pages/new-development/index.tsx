@@ -1,34 +1,34 @@
+import DevelopmentLocation from "@/modules/new-development/components/DevelopmentLocation";
+import NewDevelopmentBanner from "@/modules/new-development/components/NewDevelopmentBanner";
+import NewDevelopmentDetail from "@/modules/new-development/components/NewDevelopmentDetail";
+import PlansAndFeatures from "@/modules/new-development/components/PlansAndFeatures";
 import AboutProperty from "@/modules/new-development/components/aboutProperty";
 import Aside from "@/modules/new-development/components/aside";
 import BreadCrumb from "@/modules/new-development/components/breadCrumb";
 import ForSaleProperties from "@/modules/new-development/components/forSaleProperties";
-import GrandReveBanner from "@/modules/new-development/components/grandReveBanner";
-import GrandReveDescription from "@/modules/new-development/components/grandReveDescription";
-import GrandReveFeatures from "@/modules/new-development/components/grandReveFeatures";
-import GrandeReveLocation from "@/modules/new-development/components/grandeReveLocation";
 import PropertyInsights from "@/modules/new-development/components/propertyInsights";
 import Layout from "@/shared/components/layout/layout";
+import PageContainer from "@/shared/components/page-container/page-container";
 
 const HomePage = ({ pageProps }: any) => {
   console.log(pageProps.data.developmentDetail);
-
+  const developmentDetail = pageProps.data.developmentDetail.description;
   const properties = pageProps.data.developmentDetail.properties;
 
   return (
     <Layout>
-      <BreadCrumb breadcrumbRecord={pageProps.data.breadCrumbs} />
-      <GrandReveBanner {...pageProps} />
-      <div className="flex flex-col lg:flex-row w-full">
-        <div className="w-full lg:w-8/12">
+      <PageContainer>
+        <BreadCrumb breadcrumbRecord={pageProps.data.breadCrumbs} />
+        <NewDevelopmentBanner {...pageProps} />
+        <div className="w-full lg:w-3/5">
           <AboutProperty data={pageProps.data} />
-          <GrandReveDescription />
-          <GrandReveFeatures />
+          <NewDevelopmentDetail description={developmentDetail} />
+          <PlansAndFeatures />
           <ForSaleProperties property={properties} />
-          <GrandeReveLocation />
+          <DevelopmentLocation />
           <PropertyInsights />
         </div>
-        <Aside />
-      </div>
+      </PageContainer>
     </Layout>
   );
 };

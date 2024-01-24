@@ -10,7 +10,7 @@ const BreadCrumb = ({
 }) => {
   //
   return (
-    <ul className="flex overflow-hidden px-4 pb-1.5 hover:shadow-none md:px-3 md:py-4 lightScrollBar">
+    <ul className="flex overflow-hidden pb-1.5 hover:shadow-none md:px-3 md:py-4 lightScrollBar">
       {breadcrumbRecord.map((link) => (
         <li
           key={link.displayName}

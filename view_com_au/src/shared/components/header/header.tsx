@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import Hamburger from "../hamburger/hamburger";
+import PageContainer from "../page-container/page-container";
 
 interface IProps {
   isActive: boolean;
@@ -42,7 +43,7 @@ export const Header = (props: IProps) => {
     );
   };
 
-  const renderViewLogo = () => {
+  const renderViewLogo: () => React.JSX.Element = () => {
     return (
       <div className="w-20 h-7 lg:w-28 lg:h-10 relative">
         <Image src="/images/asset 1.svg" layout="fill" alt="company-logo" />
@@ -59,14 +60,15 @@ export const Header = (props: IProps) => {
   };
 
   return (
-    <div className="sticky top-0 z-50 bg-white">
-      <div className="flex w-full items-center justify-between pl-16 pr-4 xl:justify-center xl:gap-2 xl:p-0 h-12 lg:h-16">
-        <Hamburger onToggle={props.onClick} isActive={props.isActive} />
-        {renderViewLogo()}
-        {renderNavLinks()}
-        {renderJoinAndSignInButton()}
-      </div>
-      <div className="border-b overflow-hidden w-full" />
+    <div className="sticky top-0 z-50 bg-white border-b">
+      <PageContainer>
+        <div className="flex w-full items-center justify-between pl-16 pr-4 xl:justify-center xl:gap-2 xl:p-0 h-12 lg:h-16">
+          <Hamburger onToggle={props.onClick} isActive={props.isActive} />
+          {renderViewLogo()}
+          {renderNavLinks()}
+          {renderJoinAndSignInButton()}
+        </div> 
+      </PageContainer>
     </div>
   );
 };
