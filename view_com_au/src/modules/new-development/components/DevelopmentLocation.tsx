@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-const GrandeReveLocation = () => {
+const DevelopmentLocation = () => {
   return (
     <div className="p-4 border-b pb-12">
       <h2 className="text-lg font-bold">Location Of Grand Reve</h2>
@@ -40,4 +40,4 @@ const GrandeReveLocation = () => {
   );
 };
 
-export default GrandeReveLocation;
+export default DevelopmentLocation;

@@ -75,7 +75,7 @@ body {
 
 .border-at-light-500 {
   --tw-border-opacity: 1;
-  border-color: rgb(234 234 234/var(--tw-border-opacity));
+  border-color: rgb(234 234 234 / var(--tw-border-opacity));
 }
 
 .development-detail-container .read-more:before {
@@ -89,4 +89,6 @@ body {
   content: "";
 }
 
-
+.max-w-1200 {
+  max-width: 1200px;
+}

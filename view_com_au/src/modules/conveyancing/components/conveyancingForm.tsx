@@ -32,7 +32,7 @@ const ConveyancingForm = () => {
   };
 
   return (
-    <div className="border rounded-xl mt-4 mx-4 p-6 lg:w-[60%] lg:h-[720px]">
+    <div className="border rounded-xl mt-4 lg:mt-0 lg:ml-4 p-6 lg:w-[60%] lg:h-[720px]">
       <div>
         <p className="font-bold text-sm text-default">
           Enter your details for your $220 conveyancing voucher and a free

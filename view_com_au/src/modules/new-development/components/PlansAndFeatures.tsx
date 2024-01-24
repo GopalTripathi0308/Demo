@@ -1,6 +1,6 @@
 import React from "react";
 
-const GrandReveFeatures = () => {
+const PlansAndFeatures = () => {
   return (
     <>
       <div className="flex w-full flex-col gap-2 p-4 overflow-hidden">
@@ -23,4 +23,4 @@ const GrandReveFeatures = () => {
   );
 };
 
-export default GrandReveFeatures;
+export default PlansAndFeatures;

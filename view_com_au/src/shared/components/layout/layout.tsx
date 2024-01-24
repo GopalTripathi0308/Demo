@@ -23,13 +23,12 @@ const Layout = (props: IProps) => {
   };
 
   return (
-    <div className="my-0 mx-auto max-w-[1200px] text-default">
+    <>
       <Header onClick={onToggle} isActive={isActive} />
-
       {isActive && <SideNavbar />}
       {props.children}
       {<Footer />}
-    </div>
+    </>
   );
 };
 
